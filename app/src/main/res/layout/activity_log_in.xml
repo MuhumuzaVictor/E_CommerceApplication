@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:maxLength="8" />
-    </com.google.android.material.textfield.TextInputLayout>
+       </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/loginbutton"
@@ -118,20 +118,20 @@
         app:layout_constraintTop_toTopOf="@id/loginbutton" />
 
     <ImageView
-        android:id="@+id/fb"
+        android:id="@+id/googlelogin"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="120dp"
         android:layout_marginEnd="80dp"
-        android:src="@drawable/fb_icon"
+        android:src="@drawable/google1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.231"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/goTosignup" />
 
     <ImageView
-        android:id="@+id/google"
+        android:id="@+id/fb"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="135dp"
@@ -144,6 +144,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/goTosignup"
         app:layout_constraintVertical_bias="0.0" />
+    <ImageView
+        android:id="@+id/twitter1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="60dp"
+        android:src="@drawable/twitter1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.231"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/goTosignup"
+        app:layout_constraintVertical_bias="0.0" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

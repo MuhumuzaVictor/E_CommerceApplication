@@ -12,14 +12,43 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.viktadzy.e_commerceapplication.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_profile"
+        android:name="com.viktadzy.e_commerceapplication.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.viktadzy.e_commerceapplication.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_supermarket"
+        android:name="com.viktadzy.e_commerceapplication.Supermarket"
+        android:label="Supermarket"
+        tools:layout="@layout/fragment_supermarket" />
+    <fragment
+        android:id="@+id/nav_Electronics"
+        android:name="com.viktadzy.e_commerceapplication.Electronics"
+        android:label="Electronics"
+        tools:layout="@layout/fragment_electronics" />
+    <fragment
+        android:id="@+id/nav_Fashion"
+        android:name="com.viktadzy.e_commerceapplication.Fashion"
+        android:label="Fashion"
+        tools:layout="@layout/fragment_fashion" />
+    <fragment
+        android:id="@+id/nav_Home_Office"
+        android:name="com.viktadzy.e_commerceapplication.HomeAndOffice"
+        android:label="Home and Office"
+        tools:layout="@layout/fragment_home_and_office" />
+    <fragment
+        android:id="@+id/nav_Gaming"
+        android:name="com.viktadzy.e_commerceapplication.Gaming"
+        android:label="Gaming"
+        tools:layout="@layout/fragment_gaming" />
+    <fragment
+        android:id="@+id/nav_Help"
+        android:name="com.viktadzy.e_commerceapplication.HeplCenter"
+        android:label="Help Center"
+        tools:layout="@layout/fragment_hepl_center" />
+    <fragment
+        android:id="@+id/nav_contactUs"
+        android:name="com.viktadzy.e_commerceapplication.ContactUs"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
 </navigation>

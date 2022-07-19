@@ -60,7 +60,7 @@ class LogInActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success,navigate to the main activity
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, EditProfileActivivty::class.java)
                     startActivity(intent)
 
                     Toast.makeText(
