@@ -4,12 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue1"
-    tools:context=".Fashion">
+    tools:context=".LogOut">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <Button
+        android:id="@+id/logoutbtn"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:text="LOG OUT"
+         />
 
 </FrameLayout>

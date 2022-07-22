@@ -68,7 +68,7 @@ class SignUpActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, move to the next activity i.e Main activity
 
-                    val intent = Intent(this, EditProfileActivivty::class.java)
+                    val intent = Intent(this, Editprofile::class.java)
                     startActivity(intent)
 
                     Toast.makeText(

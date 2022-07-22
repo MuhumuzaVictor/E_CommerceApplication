@@ -11,6 +11,7 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.viktadzy.e_commerceapplication.ui.home.HomeFragment
 
 class LogInActivity : AppCompatActivity() {
 
@@ -60,7 +61,7 @@ class LogInActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success,navigate to the main activity
-                    val intent = Intent(this, EditProfileActivivty::class.java)
+                    val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
 
                     Toast.makeText(

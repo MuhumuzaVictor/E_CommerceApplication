@@ -42,13 +42,19 @@
         android:label="Gaming"
         tools:layout="@layout/fragment_gaming" />
     <fragment
+        android:id="@+id/nav_contactUs"
+        android:name="com.viktadzy.e_commerceapplication.ContactUs"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
         android:id="@+id/nav_Help"
         android:name="com.viktadzy.e_commerceapplication.HeplCenter"
         android:label="Help Center"
         tools:layout="@layout/fragment_hepl_center" />
     <fragment
-        android:id="@+id/nav_contactUs"
-        android:name="com.viktadzy.e_commerceapplication.ContactUs"
-        android:label="fragment_contact_us"
-        tools:layout="@layout/fragment_contact_us" />
+        android:id="@+id/nav_logOut"
+        android:name="com.viktadzy.e_commerceapplication.LogOut"
+        android:label="Log Out"
+        tools:layout="@layout/fragment_log_out" />
+
 </navigation>
