@@ -1,39 +1,39 @@
 package com.viktadzy.e_commerceapplication
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.WindowManager
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.viktadzy.e_commerceapplication.databinding.FragmentLogOutBinding
-import java.security.Signature
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+import com.viktadzy.e_commerceapplication.databinding.ActivityLogOutBinding
 
+class LogOut : AppCompatActivity() {
 
-class LogOut : Fragment() {
+    private lateinit var binding:ActivityLogOutBinding
+    private lateinit var auth: FirebaseAuth
 
-    private lateinit var binding: FragmentLogOutBinding
-    private lateinit var user: FirebaseAuth
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        val view: View = inflater!!.inflate(R.layout.fragment_log_out, container, false)
+        binding = ActivityLogOutBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
-        user= FirebaseAuth.getInstance()
-        binding.logoutbtn.setOnClickListener{
-            user.signOut()
-            requireActivity().run{
-                startActivity(Intent(this,SignUpActivity::class.java))
-                finish()
-            }
+        auth = Firebase.auth
 
+        binding.logout.setOnClickListener {
+            auth.signOut()
+            Toast.makeText(this, "Logged Out Successfully", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, LogInActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
         }
-
-
-        return view
+        binding.cancel.setOnClickListener {
+            finish()
+        }
     }
 }

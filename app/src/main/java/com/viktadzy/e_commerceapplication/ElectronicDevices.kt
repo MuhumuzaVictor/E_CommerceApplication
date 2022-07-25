@@ -7,22 +7,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.viktadzy.e_commerceapplication.databinding.FragmentElectronicDevicesBinding
-import com.viktadzy.e_commerceapplication.databinding.FragmentSupermarketBinding
 
+class ElectronicDevices : Fragment() {
 
-class Supermarket : Fragment() {
-
-    private lateinit var binding: FragmentSupermarketBinding
+    private lateinit var binding: FragmentElectronicDevicesBinding
 
     private lateinit var itemTitles:Array<String>
     private lateinit var itemImages:Array<Int>
     private lateinit var itemLinks:Array<String>
     private lateinit var arrayList:ArrayList<Data>
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentSupermarketBinding.inflate(inflater, container, false)
+
+        binding = FragmentElectronicDevicesBinding.inflate(inflater, container, false)
         val root: View = binding.root
         //Data source
         itemLinks = arrayOf(
@@ -34,15 +34,15 @@ class Supermarket : Fragment() {
             "https://www.jumia.ug/catalog/?q=watches"
         )
 
-        itemTitles = arrayOf("Bakery",
-            "Dairy Products",
-            "Ice cream",
-            "Fruits",
-            "Vegetables",
-            "Meat"
+        itemTitles = arrayOf("MobilePhones",
+            "Computers",
+            "Speakers",
+            "TV's",
+            "Digital Camera",
+            "Watches"
         )
-        itemImages = arrayOf(R.drawable.bakery, R.drawable.diary, R.drawable.icecream,
-            R.drawable.fruits,R.drawable.vegetables, R.drawable.meat
+        itemImages = arrayOf(R.drawable.mobilephones, R.drawable.computer, R.drawable.speaker,
+            R.drawable.tv,R.drawable.digitalcamera, R.drawable.watches
         )
 
         arrayList = arrayListOf()
@@ -67,5 +67,6 @@ class Supermarket : Fragment() {
         }
         return root
     }
+
 
 }

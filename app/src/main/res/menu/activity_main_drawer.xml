@@ -4,18 +4,12 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item android:title="Account settings">
-            <menu>
-                <item
-                    android:id="@+id/nav_profile"
-                    android:icon="@drawable/ic_baseline_account_circle_24"
-                    android:title="My account" />
-            </menu>
-        </item>
+
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/menu_home" />
+
 
         <item android:title="Our categories">
             <menu>
@@ -24,9 +18,10 @@
                     android:icon="@drawable/apple"
                     android:title="Supermarket" />
                 <item
-                    android:id="@+id/nav_Electronics"
+                    android:id="@+id/nav_electronic"
                     android:icon="@drawable/ic_baseline_live_tv_24"
-                    android:title="Electronics" />
+                    android:title="Electronics"/>
+
                 <item
                     android:id="@+id/nav_Fashion"
                     android:icon="@drawable/cloth"
@@ -35,13 +30,18 @@
                     android:id="@+id/nav_Home_Office"
                     android:icon="@drawable/office"
                     android:title="Home and Office" />
-                <item
-                    android:id="@+id/nav_Gaming"
-                    android:icon="@drawable/gamepad"
-                    android:title="Gaming" />
+
             </menu>
         </item>
 
+        <item android:title="Account settings">
+            <menu>
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/ic_baseline_account_circle_24"
+                    android:title="My account" />
+            </menu>
+        </item>
         <item
             android:id="@+id/nav_contactUs"
             android:icon="@drawable/ic_baseline_info_24"
@@ -52,7 +52,7 @@
             android:title="Help Center" />
         <item
             android:id="@+id/nav_logOut"
-            android:icon="@drawable/ic_baseline_power_settings_new_24"
+            android:icon="@drawable/logout"
             android:title="Log Out" />
 
     </group>

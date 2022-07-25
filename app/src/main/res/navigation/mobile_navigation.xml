@@ -10,51 +10,38 @@
         android:name="com.viktadzy.e_commerceapplication.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
-
-    <fragment
-        android:id="@+id/nav_profile"
-        android:name="com.viktadzy.e_commerceapplication.ProfileFragment"
-        android:label="Profile"
-        tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/nav_supermarket"
         android:name="com.viktadzy.e_commerceapplication.Supermarket"
         android:label="Supermarket"
-        tools:layout="@layout/fragment_supermarket" />
+        tools:layout="@layout/fragment_supermarket"/>
     <fragment
-        android:id="@+id/nav_Electronics"
-        android:name="com.viktadzy.e_commerceapplication.Electronics"
+        android:id="@+id/nav_electronic"
+        android:name="com.viktadzy.e_commerceapplication.ElectronicDevices"
         android:label="Electronics"
-        tools:layout="@layout/fragment_electronics" />
+        tools:layout="@layout/fragment_electronic_devices"/>
     <fragment
-        android:id="@+id/nav_Fashion"
-        android:name="com.viktadzy.e_commerceapplication.Fashion"
-        android:label="Fashion"
-        tools:layout="@layout/fragment_fashion" />
-    <fragment
-        android:id="@+id/nav_Home_Office"
-        android:name="com.viktadzy.e_commerceapplication.HomeAndOffice"
-        android:label="Home and Office"
-        tools:layout="@layout/fragment_home_and_office" />
-    <fragment
-        android:id="@+id/nav_Gaming"
-        android:name="com.viktadzy.e_commerceapplication.Gaming"
-        android:label="Gaming"
-        tools:layout="@layout/fragment_gaming" />
-    <fragment
+        android:id="@+id/nav_sporting"
+        android:name="com.viktadzy.e_commerceapplication.SportingGoods"
+        android:label="Sporting Goods"
+        tools:layout="@layout/fragment_sporting_goods"/>
+    <activity
+        android:id="@+id/nav_profile"
+        android:name="com.viktadzy.e_commerceapplication.Profile"
+        android:label="Profile"
+        tools:layout="@layout/activity_profile" />
+
+    <activity
         android:id="@+id/nav_contactUs"
         android:name="com.viktadzy.e_commerceapplication.ContactUs"
-        android:label="fragment_contact_us"
-        tools:layout="@layout/fragment_contact_us" />
-    <fragment
-        android:id="@+id/nav_Help"
-        android:name="com.viktadzy.e_commerceapplication.HeplCenter"
-        android:label="Help Center"
-        tools:layout="@layout/fragment_hepl_center" />
-    <fragment
+        android:label="contact_us"
+        tools:layout="@layout/activity_contact_us" />
+
+    <activity
         android:id="@+id/nav_logOut"
         android:name="com.viktadzy.e_commerceapplication.LogOut"
         android:label="Log Out"
-        tools:layout="@layout/fragment_log_out" />
+        tools:layout="@layout/activity_log_out"
+        />
 
 </navigation>

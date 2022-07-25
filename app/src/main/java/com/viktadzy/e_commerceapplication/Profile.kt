@@ -3,9 +3,9 @@ package com.viktadzy.e_commerceapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class ContactUs : AppCompatActivity() {
+class Profile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_contact_us)
+        setContentView(R.layout.activity_profile)
     }
 }
