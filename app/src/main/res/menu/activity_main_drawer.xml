@@ -30,6 +30,10 @@
                     android:id="@+id/nav_Home_Office"
                     android:icon="@drawable/office"
                     android:title="Home and Office" />
+                <item
+                    android:id="@id/nav_sporting"
+                    android:icon="@drawable/ic_baseline_sports_kabaddi_24"
+                    android:title="Sporting Goods"/>
 
             </menu>
         </item>

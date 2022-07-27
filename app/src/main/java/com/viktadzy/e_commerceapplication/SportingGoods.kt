@@ -1,59 +1,74 @@
 package com.viktadzy.e_commerceapplication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.viktadzy.e_commerceapplication.databinding.FragmentElectronicDevicesBinding
+import com.viktadzy.e_commerceapplication.databinding.FragmentSportingGoodsBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [SportingGoods.newInstance] factory method to
- * create an instance of this fragment.
- */
 class SportingGoods : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+
+    private lateinit var binding: FragmentSportingGoodsBinding
+
+    private lateinit var itemTitles:Array<String>
+    private lateinit var itemImages:Array<Int>
+    private lateinit var itemLinks:Array<String>
+    private lateinit var arrayList:ArrayList<Data>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sporting_goods, container, false)
+        binding = FragmentSportingGoodsBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+        //Data source
+        itemLinks = arrayOf(
+            "https://www.jumia.ug/phones-tablets/",
+            "https://www.jumia.ug/computing/",
+            "https://www.jumia.ug/catalog/?q=speakers",
+            "https://www.jumia.ug/catalog/?q=tvs"
+
+        )
+
+        itemTitles = arrayOf("Sports and Fitness",
+            "Outdoor & Recreation",
+            "Outdoor & Adventure",
+            "Racquet Sports",
+
+        )
+        itemImages = arrayOf(R.drawable.gym, R.drawable.tent, R.drawable.smartwatch,
+            R.drawable.racket
+        )
+
+        arrayList = arrayListOf()
+
+        for (i in itemTitles.indices){
+            val rowItem = Data(itemTitles[i], itemImages[i])
+            arrayList.add(rowItem)
+        }
+
+        val gridView = binding.gridViewsporting
+
+        gridView.adapter = activity?.let { CustomAdapter(it, arrayList) }
+        gridView.isClickable = true
+
+
+        gridView.setOnItemClickListener{parent, view, position, id ->
+            val intent = Intent(this.requireContext(), WebViewInflater::class.java)
+
+            intent.putExtra("urls", itemLinks[position])
+
+            startActivity(intent)
+        }
+        return root
+
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SportingGoods.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SportingGoods().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+
 }
